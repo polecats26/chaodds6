@@ -1,0 +1,47 @@
+$chao-grey: #ccc;
+
+header {
+    background-color: #fefefe;
+    padding: 1rem;
+    border-bottom: thin solid $chao-grey;
+    .title {
+        font-family: "Poppins", sans-serif;
+        text-align: center;
+        @media (min-width: 1023px) {
+            text-align: left;
+        }
+    }
+    .navbar {
+        text-align: right;
+        @media (max-width: 1023px) {
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 1rem;
+            border-top: thin solid $chao-grey;
+            display: flex;
+            z-index: 100;
+        }
+        .navitem {
+            font-family: "Poppins", sans-serif;
+            display: inline-block;
+            margin-left: 2rem;
+            font-size: 12px;
+            i {
+                display: none;
+            }
+            @media (max-width: 1023px) {
+                i {
+                    display: block;
+                    font-size: 26px;
+                    margin-bottom: 10px;
+                }
+                margin-left: 0;
+                flex-grow: 1;
+
+            }
+        }
+    }
+}
