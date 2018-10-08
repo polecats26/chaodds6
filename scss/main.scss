@@ -8,6 +8,20 @@ $chao-footer-grey: #333;
 a {
     color: $chao-light-blue;
 }
+.eyebrow {
+    div.notification {
+        display: none;
+        font-family: "Poppins", sans-serif;
+        background-color: $chao-blue;
+        color: white;
+        text-align: center;
+        font-size: 12px;
+        letter-spacing: 1px;
+        font-weight: 400;
+        text-transform: uppercase;
+        padding: .5rem 1rem;
+    }
+}
 
 
 header {
@@ -226,5 +240,14 @@ footer {
             }
         }
         
+    }
+    .copyright {
+        padding: 1rem;
+        color: #aaa;
+        font-size: 12px;
+        @media (min-width: $desktop-width) {
+            font-size: 14px
+        }
+        text-align: center;
     }
 }
