@@ -4,6 +4,7 @@ $desktop-width: 1024px;
 $chao-light-blue: #538ae2;
 $chao-blue: #3c69b2;
 $chao-footer-grey: #333;
+$chao-footer-black: #222;
 
 a {
     color: $chao-light-blue;
@@ -117,9 +118,10 @@ main {
             }
             
             .splash-text {
-                padding-left: 3rem;
-                width: 50%;
+                padding-left: 1rem;
+                width: 60%;
                 @media (min-width: $tablet-width) {
+                    padding-left: 3rem;
                     width: 70%;
                 }
             }
@@ -167,7 +169,6 @@ main {
             }
         }
     }
-    
 }
 
 footer {
@@ -178,7 +179,7 @@ footer {
         min-height: 300px;
         padding: 2rem;
     }
-    .office-hours, .office-address {
+    .office-hours, .office-address, .social {
         h3 {
             font-family: "Poppins", sans-serif;
             font-size: 14px;
@@ -241,8 +242,31 @@ footer {
         }
         
     }
+    .social { 
+        padding: 1.5rem 0;
+        text-align: center;
+        
+        .social-icon-container {
+            display: inline-block;
+            margin: 0 .25rem;
+        }
+        .social-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $chao-footer-black;
+            border-radius: 20px;
+            width: 40px;
+            height: 40px;
+            margin: 0;
+            
+            &:hover {
+                background-color: $chao-blue;
+            }
+        }
+    }
     .copyright {
-        padding: 1rem;
+        padding: 0 1rem 1rem;
         color: #aaa;
         font-size: 12px;
         @media (min-width: $desktop-width) {
