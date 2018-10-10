@@ -4,6 +4,7 @@ $desktop-width: 1024px;
 $chao-light-blue: #538ae2;
 $chao-blue: #3c69b2;
 $chao-footer-grey: #333;
+
 $chao-footer-black: #222;
 
 a {
@@ -32,8 +33,10 @@ header {
     .title {
         font-family: "Poppins", sans-serif;
         text-align: center;
+        font-size: 1.125rem;
         @media (min-width: 1023px) {
             text-align: left;
+            font-size: 1.25rem;
         }
     }
     .navbar {
@@ -56,6 +59,9 @@ header {
             display: inline-block;
             margin-left: 2rem;
             font-size: 12px;
+            a {
+                color: black;
+            }
             i {
                 display: none;
             }
@@ -72,8 +78,12 @@ header {
         }
     }
 }
-
+main, .footer {
+    max-width: 1280px;
+    margin: 0 auto;
+}
 main {
+    
     .splash-container {
         display: flex;
         align-items: center;
@@ -116,7 +126,6 @@ main {
                 background: url("../assets/dr_chao.png") no-repeat right 5rem bottom;
                 background-size: contain;
             }
-            
             .splash-text {
                 padding-left: 1rem;
                 width: 60%;
@@ -136,6 +145,9 @@ main {
                     font-size: 32px;
                 }
             }
+        }
+        .value-props-container {
+            box-shadow: 0px 5px 20px rgba(0,0,0,0.3);
         }
         .value-props {
             .value-prop {
@@ -168,6 +180,35 @@ main {
                 background-color: $chao-light-blue;
             }
         }
+        .news-container, .form-container {
+            min-height: 300px;
+            padding: 3rem 5rem;
+            font-family: "Poppins", sans-serif;
+            h2 {
+                font-family: inherit;
+                font-weight: 400;
+                font-size: 20px;
+                letter-spacing: 2px;
+                color: $chao-blue;
+                text-transform: uppercase;
+                margin-bottom: 1rem;
+            }
+            li {
+                font-family: inherit;
+                font-weight: 300;
+                font-size: 14px;
+                margin-bottom: 1rem;
+                list-style-type: none;
+                &:before {
+                    font-family: 'Font Awesome 5 Pro';
+                    font-weight: 400;
+                    font-size: 16px;
+                    margin: 0 5px 0 -21px;
+                    color: $chao-blue;
+                    content: "\f06a"
+                }
+            }
+        }
     }
 }
 
@@ -179,7 +220,7 @@ footer {
         min-height: 300px;
         padding: 2rem;
     }
-    .office-hours, .office-address, .social {
+    .office-hours, .office-address, .social, .office-misc {
         h3 {
             font-family: "Poppins", sans-serif;
             font-size: 14px;
