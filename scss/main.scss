@@ -182,7 +182,10 @@ main {
         }
         .news-container, .form-container {
             min-height: 300px;
-            padding: 3rem 5rem;
+            padding: 3rem 2rem 1rem;
+            @media (min-width: $tablet-width) {
+                padding: 3rem 5rem;
+            }
             font-family: "Poppins", sans-serif;
             h2 {
                 font-family: inherit;
@@ -209,10 +212,28 @@ main {
                 }
             }
         }
+        .form-container {
+            input, textarea {
+                font-size: 14px;
+            }
+            .btn {
+                background-color: $chao-blue;
+                color: white;
+                font-size: 14px;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                padding: .5rem 2rem;
+                cursor: pointer;
+                &:hover {
+                    background-color: $chao-light-blue;
+                }
+            }
+        }
     }
 }
 
 footer {
+    margin-top: 2rem;
     background-color: $chao-footer-grey;
     padding: 2rem 2rem 8rem;
     color: white;
